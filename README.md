@@ -2,7 +2,7 @@
 # BIC21203 Web Development
 ## Lab 4a: Client-Side Scripting (JavaScript)
 
-**Name:** Khairulamirin bin Azhar  
+**Name:** KHAIRULAMIRIN BIN AZHAR
 **Student ID:** CI240121  
 **Course:** BIC21203 Web Development  
 **Faculty:** Faculty of Computer Science and Information Technology(BIS)
