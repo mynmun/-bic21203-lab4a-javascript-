@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2 - Number Validator</title>
+</head>
+<body>
+
+    <label for="userInput">Enter a number:</label>
+    <input type="text" id="userInput" placeholder="Enter a number">
+
+    <button id="checkBtn" type="button">Check</button>
+
+    <p id="result" role="status" aria-live="polite"></p>
+
+    <script>
+        // Select the HTML elements
+        const userInput = document.getElementById("userInput");
+        const checkBtn = document.getElementById("checkBtn");
+        const result = document.getElementById("result");
+
+        // Define the validation function
+        function checkInput() {
+            const inputValue = userInput.value.trim();
+
+            // Check for empty input
+            if (inputValue === "") {
+                result.textContent = "Please enter a valid number!";
+            } else {
+                const number = Number(inputValue);
+
+                // Check whether the input is a valid number
+                if (!Number.isFinite(number)) {
+                    result.textContent = "Please enter a valid number!";
+                } else if (number < 10) {
+                    result.textContent = "The number is lower than 10";
+                } else if (number > 10) {
+                    result.textContent = "The number is higher than 10";
+                } else {
+                    result.textContent = "The number is equal to 10";
+                }
+            }
+        }
+
+        // Add click event listener
+        checkBtn.addEventListener("click", checkInput);
+    </script>
+
+</body>
+</html>
